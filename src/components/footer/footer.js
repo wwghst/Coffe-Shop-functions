@@ -14,7 +14,7 @@ export const Footer = (props) => {
         <div>
           <img src={LogoOne} alt='logo' className='footer__logo' />
           <NavLink
-            to='/Coffe-Shop'
+            to='/Coffe-Shop-functions'
             className='footer__link'
             style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : 'none' })}
           >

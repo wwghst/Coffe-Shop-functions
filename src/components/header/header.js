@@ -11,7 +11,7 @@ export const Header = () => {
         <div>
           <img src={LogoOne} alt='logo' className='header__logo' />
           <NavLink
-            to='/Coffe-Shop'
+            to='/Coffe-Shop-functions'
             className='header__link'
             style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : 'none' })}
           >
