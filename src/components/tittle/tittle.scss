@@ -1,0 +1,21 @@
+.tittleShop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 100px;
+
+    &__bg{
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        z-index: -1;
+    }
+
+    &__title{
+        font-size: 40px;
+        color: white;
+        margin-top: 70px;
+    }
+}

@@ -1,0 +1,16 @@
+.favorites__cards {
+  padding-block: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.favorites__notDate {
+  font-weight: 700;
+  font-size: 150px;
+  line-height: 217px;
+  text-align: center;
+
+  color: #c2c2c2;
+}

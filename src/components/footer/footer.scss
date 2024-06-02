@@ -1,0 +1,34 @@
+.footer {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  &__menu {
+    display: flex;
+    align-items: end;
+    gap: 50px;
+  }
+
+  &__link {
+    font-size: 15px;
+    color:inherit;
+    text-decoration: none;
+  }
+
+  &__logo {
+    width: 50px;
+  }
+
+  &__line{
+    font-size: 15px;
+    color: #000000;
+}
+
+&__links{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+}

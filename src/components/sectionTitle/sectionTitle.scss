@@ -1,0 +1,28 @@
+.section {
+  &__title {
+    --color: white;
+    display: inline-block;
+    text-align: center;
+    padding-inline: 85px;
+    position: relative;
+    color: #fff;
+
+    &::before,
+    &::after {
+      content: '';
+      width: 60px;
+      height: 1px;
+      background-color: var(--color);
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      right: 0;
+    }
+    &::after {
+      left: 0;
+    }
+  }
+}

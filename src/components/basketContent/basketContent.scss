@@ -1,0 +1,118 @@
+.basketContent{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+
+    &__header{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    &__tittle{
+        font-size: 24px;
+        color: #000;
+        text-decoration:none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    &__tittle-noHover{
+        font-size: 24px;
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 30px;
+    }
+    &__cart{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        justify-content: space-between;
+        background-image: url(../../assets/images/HomeCards.png);
+        padding: 20px;
+        margin-top: 20px;
+    }
+    &__img{
+        width: 150px;
+        height: 140px;
+    }
+    &__name{
+        text-align: center;
+        width: 140px;
+        font-size: 24px;
+    }
+    &__count{
+        font-size: 24px;
+    }
+    &__buttons{
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        gap: 20px;
+    }
+    &__btn{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border: none;
+        background-color: white;
+        fill: white;
+        cursor: pointer;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    &__buyBox{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items:start;
+        align-self:end;       
+        margin-top: 100px; 
+        gap: 20px;
+    }
+    &__total{
+        font-size: 30px;
+    }
+    &__buyBtn{
+        font-family: Merienda, serif;
+        width: 170px;
+        font-size: 30px;
+        cursor: pointer;
+        border:none;
+        background-image: url(../../assets/images/HomeCards.png);
+        transition: all 0.3s;
+
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+}
+.gap{
+    padding-left: 50px;
+    gap: 165px;
+    margin-top: 50px;
+}
+.pointer{
+    cursor: pointer;
+}
+.dataZero{
+    font-size: 150px;
+    text-align: center;
+    width: 50%;
+    align-self: center;
+    color: #C2C2C2;
+}
