@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/Coffe-Shop-functions/static/css/main.6e4c04f3.css",
+    "main.js": "/Coffe-Shop-functions/static/js/main.131749d6.js",
+    "static/media/HomeCards.png": "/Coffe-Shop-functions/static/media/HomeCards.d7296034fc5974bb42b9.png",
+    "static/media/HomeCard-1.png": "/Coffe-Shop-functions/static/media/HomeCard-1.a672c58b6e617572b337.png",
+    "static/media/HomeBg.png": "/Coffe-Shop-functions/static/media/HomeBg.6e31be17fdd6f04a7193.png",
+    "static/media/HomeCard-2.png": "/Coffe-Shop-functions/static/media/HomeCard-2.78e765101f77c06ff0a3.png",
+    "static/media/ShopTittleBg.png": "/Coffe-Shop-functions/static/media/ShopTittleBg.301e0d5928deaf6f5526.png",
+    "static/media/FavoriteAndCartTittleBg.png": "/Coffe-Shop-functions/static/media/FavoriteAndCartTittleBg.e1be0f2d81c4027dbac9.png",
+    "static/media/cartAndBasketBg.png": "/Coffe-Shop-functions/static/media/cartAndBasketBg.7f0d19ccddb82986112d.png",
+    "static/media/aboutShopImg.png": "/Coffe-Shop-functions/static/media/aboutShopImg.fda6a55a3c6bb6b33b0d.png",
+    "static/media/1.png": "/Coffe-Shop-functions/static/media/1.66b88f5283c89c0b4083.png",
+    "static/media/LogoOne.svg": "/Coffe-Shop-functions/static/media/LogoOne.44613e1e1507ecc486d0aa0f3169912c.svg",
+    "static/media/LogoTwo.svg": "/Coffe-Shop-functions/static/media/LogoTwo.2e46afc1305fc572df73247716d2ff6c.svg",
+    "index.html": "/Coffe-Shop-functions/index.html",
+    "static/media/Basket.svg": "/Coffe-Shop-functions/static/media/Basket.40351cd5aa5bdd6245061b9a8e6266f2.svg",
+    "static/media/Heart.svg": "/Coffe-Shop-functions/static/media/Heart.8560d438b2ca3baed2db0f836265dd51.svg",
+    "static/media/BlackHeart.svg": "/Coffe-Shop-functions/static/media/BlackHeart.dadd02810ef2cc4fc7c0030a39e09ba6.svg",
+    "static/media/Plus.svg": "/Coffe-Shop-functions/static/media/Plus.5c5f6f25d2a1c3b21a0cf8eb925734bf.svg",
+    "static/media/PlusBlack.svg": "/Coffe-Shop-functions/static/media/PlusBlack.071759150444eda1ed75a13bd72a52b5.svg",
+    "main.6e4c04f3.css.map": "/Coffe-Shop-functions/static/css/main.6e4c04f3.css.map",
+    "main.131749d6.js.map": "/Coffe-Shop-functions/static/js/main.131749d6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6e4c04f3.css",
+    "static/js/main.131749d6.js"
+  ]
+}
