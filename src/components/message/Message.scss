@@ -1,0 +1,29 @@
+.success {
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    background: #EDFBD8;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px -3px #2bff00;
+    position: fixed;
+    z-index: 10;
+    bottom: 10vh;
+  }
+  
+  .success__icon {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    transform: translateY(-5px);
+    margin-right: 8px;
+  }
+  
+  .success__title {
+    font-weight: 500;
+    font-size: 20px;
+    color: #2B641E;
+  }
+  
+  

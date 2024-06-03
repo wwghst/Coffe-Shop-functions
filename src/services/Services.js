@@ -1,12 +1,17 @@
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 
 const useServices = () => {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+
   const getData = useCallback(async () => {
     const response = await fetch('https://66169b81ed6b8fa43480e96b.mockapi.io/carts');
     if (!response.ok) {
-      throw new Error('Failed to fetch data');
+      setLoading(false);
+      setError(true);
     }
     const data = await response.json();
+    setLoading(false);
     return data;
   }, []);
 
@@ -24,7 +29,7 @@ const useServices = () => {
       })
         .then((response) => {
           if (!response.ok) {
-            throw new Error('Failed to update favorite status');
+            setError(true);
           }
           resolve();
           return response;
@@ -35,8 +40,7 @@ const useServices = () => {
         });
     });
   }, []);
-
-  return { getData, putData };
+  return { getData, putData, loading, setLoading, error, setError };
 };
 
 export default useServices;

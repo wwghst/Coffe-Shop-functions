@@ -6,6 +6,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  width: 100%;
+  margin-top: 50px;
 
   &__title {
     text-align: center;
@@ -15,10 +17,10 @@
 
   &__cards{
     display: flex;
-    gap: 20px;
-    justify-content: space-between;
-    align-items: center;
 
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
   }
 }
 

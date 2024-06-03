@@ -1,0 +1,65 @@
+/* Sceleton.scss */
+.skeleton {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    gap: 90px;
+  }
+  
+  .skeleton__block {
+    width: 200px;
+    height: 260px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+  
+  .pulse {
+    display: inline-block;
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .char__select {
+    font-size: 20px;
+    margin-bottom: 16px;
+    text-align: center;
+    color: #666;
+  }
+
+
+  .skeleton-bask {
+    gap: 10px;
+    &__block {
+        height: 140px;
+        width: 100%;
+        background-color: #C4C4C4;
+        margin-top: 20px;
+    }
+}
+  

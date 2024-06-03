@@ -1,16 +1,22 @@
 .favorites__cards {
-    padding-block: 40px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  width: 70%;
+  margin: 50px auto;
+  gap: 90px;
+
+  &--empty{
+    display: 0 auto;
+  }
   }
   
   .favorites__notDate {
-    font-weight: 700;
-    font-size: 150px;
-    line-height: 217px;
+    font-size: 100px;
     text-align: center;
-  
-    color: #c2c2c2;
+    width: 100%;
+    align-self: center;
+    color: #C2C2C2;
   }

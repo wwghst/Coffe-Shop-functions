@@ -5,13 +5,17 @@ import Heart from '../../assets/Heart.svg';
 import Img from '../../assets/images/1.png';
 import Plus from '../../assets/Plus.svg';
 import useServices from '../../services/Services';
+import { Error } from '../error/Error';
+import { Loading } from '../loading/Loading';
+import { Message } from '../message/Message';
 
 import './shopContent.scss';
 
 const ShopContent = () => {
   const [data, setData] = useState([]);
   const [changedData, setChangedData] = useState([]);
-  const { getData, putData } = useServices();
+  const [message, setMessage] = useState(false)
+  const { getData, putData, loading, error } = useServices();
 
   const fetchData = async () => {
     const result = await getData();
@@ -72,34 +76,50 @@ const ShopContent = () => {
     [data, fetchData]
   );
 
-  const handleFavoriteClick = (item) => {
-    putData(item.id, 'favorite', !item.favorite)
+  const handleFavoriteClick = (item, key) => {
+    putData(item.id, key, !item[key])
       .then(() => {
         const updatedData = changedData.map((dataItem) => {
           if (dataItem.id === item.id) {
-            return { ...dataItem, favorite: !item.favorite };
+            return { ...dataItem, [key]: !item[key] };
           }
           return dataItem;
         });
-
+  
         const updatedMainData = data.map((dataItem) => {
           if (dataItem.id === item.id) {
-            return { ...dataItem, favorite: !item.favorite };
+            return { ...dataItem, [key]: !item[key] };
           }
           return dataItem;
         });
-
+  
         setData(updatedMainData);
         setChangedData(updatedData);
         return updatedData;
       })
       .catch((error) => {
-        console.error('Failed to update favorite status:', error);
+        console.error('Failed to update status:', error);
       });
   };
+  
 
+  const onMessage = (msg) => {
+    setMessage(msg)
+    setTimeout(() => {
+      setMessage(false)
+    }, 1000)
+  }
+
+  const isLoading = loading ? <Loading /> : null;
+  const isError = error && !loading ? <Error /> : null;
+  const content =
+    !error && !loading ? (
+      <View changedData={changedData} putData={putData} handleFavoriteClick={handleFavoriteClick} onMessage={onMessage} />
+    ) : null;
+  const isMessage = message ? <Message msg={message} /> : null;
   return (
     <div className='shopContent'>
+      {isMessage}
       <div className='shopContent__header'>
         <div className='shopContent__box'>
           <h2 className='shopContent__title'>Looking for</h2>
@@ -127,18 +147,16 @@ const ShopContent = () => {
         </div>
       </div>
       <div className='shopContent__main'>
-        <View
-          changedData={changedData}
-          putData={putData}
-          handleFavoriteClick={handleFavoriteClick}
-        />
+        {isLoading}
+        {isError}
+        {content}
       </div>
     </div>
   );
 };
 
 const View = (props) => {
-  const { changedData, handleFavoriteClick, putData } = props;
+  const { changedData, handleFavoriteClick, onMessage } = props;
 
   return (
     <>
@@ -148,8 +166,12 @@ const View = (props) => {
             className='shopContent__favBtn'
             type='button'
             id='favorite'
-            onClick={() => handleFavoriteClick(item)}
-          >
+            onClick={() => {
+              handleFavoriteClick(item, 'favorite')
+              if (!item.favorite) {
+                onMessage('Product added to favorite');
+              }              
+            }}>
             <img
               src={item.favorite ? BlackHeart : Heart}
               alt='heart'
@@ -165,9 +187,14 @@ const View = (props) => {
               className='shopContent__plusBtn'
               type='button'
               id='basket'
-              onClick={() => putData(item.id, 'inCart', true)}
+              onClick={() => {
+                handleFavoriteClick(item, 'inCart')
+                if (!item.inCart) {
+                  onMessage('Product added to cart')
+                }   
+              }}
             >
-              <img src={Plus} alt='plus' />
+              <img src={Plus} alt='plus' className={item.inCart ? 'shopContent__plusBtn__img--cross' : 'shopContent__plusBtn__img'} />
             </button>
             <div className='shopContent__count'>
               <h2 className='shopContent__title'>{item.city}</h2>
