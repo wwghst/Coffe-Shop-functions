@@ -155,9 +155,7 @@ const ShopContent = () => {
   );
 };
 
-const View = (props) => {
-  const { changedData, handleFavoriteClick, onMessage } = props;
-
+const View = ({ changedData, handleFavoriteClick, onMessage }) => {
   return (
     <>
       {changedData.map((item) => (

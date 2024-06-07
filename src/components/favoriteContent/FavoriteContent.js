@@ -61,9 +61,7 @@ export const FavoriteContent = () => {
   );
 };
 
-const View = (props) => {
-  const { handleFavoriteClick, putData, data } = props;
-
+const View = ({ handleFavoriteClick, putData, data }) => {
   return (
     <>
       {data.map((item) => (

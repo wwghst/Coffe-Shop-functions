@@ -74,8 +74,7 @@ export const BasketContent = () => {
   );
 };
 
-const View = (props) => {
-  const { onPlus, onDelete, data } = props;
+const View = ({ onPlus, onDelete, data }) => {
   return (
     <>
       {data.map((item) => (
